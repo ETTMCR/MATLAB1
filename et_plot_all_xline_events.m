@@ -1,5 +1,5 @@
 %% et_plot_all_xline_events
-% xline ploting the events in the raw data across time
+% plotting all the xline's regarded to the time of the events in the raw data across time course.
 % ans option to only make the xline's without plotting before 
 % IMPORTANT - pick num
 % if by click any raw figure - use gcf
@@ -12,7 +12,7 @@ function et_plot_all_xline_events(num_of_fig)
 %et_crop_ETR_contin
 
 %%
-%et_globals; 
+%et_globals; % using global var's
 %observer=1; %if there are many 
 element='P2 P';
 % element='P2';
