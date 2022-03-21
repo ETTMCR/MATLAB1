@@ -1,18 +1,18 @@
 %% et_plot_all_xline_events
 % plotting all the xline's regarded to the time of the events in the raw data across time course
-% ans option to only make the xline's without plotting before 
-% if by click any raw figure - use gcf
+% and an option to only drawing the xline's without plotting before 
+%
+% examples :
+% et_plot_all_xline_events_cond(9,1) - showing figure 9 with conditions under the events xlines also
+% et_plot_all_xline_events_cond(9,0) - showing figure 9 without the conditions, only with xlines events 
+% et_plot_all_xline_events_cond() - showing last figure, or the one that was clicked, only with xlines events 
+%
 % condi=1 i.e. to show the conditions also - don't forget to use before the function et_set_events_in_epochs_from_psy
 % such as below
 %py_val('s.ear s.freq');
 %et_set_events_in_epochs_from_psy('cmnt');
 %et_set_events_in_epochs_from_psy('s.ear', 's.freq'); 
-% et_plot_all_xline_events_cond() i.e. showing only xlines according to events
-% examples :
-% et_plot_all_xline_events_cond(9,1) - showing figure 9 with conditions under the events xlines also
-% et_plot_all_xline_events_cond(9,0) - showing figure 9 without the conditions, only with xlines events 
-% et_plot_all_xline_events_cond() - showing last figure, or the one that was clicked, only with xlines events 
-
+%
 function et_plot_all_xline_events_cond(num_of_fig,condi) 
 %function et_plot_all_xline_events(element,observer) % for new plot 
 % element can be (as a string) pdif P P2 H H2 V V2 asym 
