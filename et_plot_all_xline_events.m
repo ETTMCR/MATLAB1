@@ -1,8 +1,9 @@
 %% et_plot_all_xline_events
 % plotting all the xline's regarded to the time of the events in the raw data across time course.
-% ans option to only make the xline's without plotting before 
-% IMPORTANT - pick num
-% if by click any raw figure - use gcf
+% and an option to draw only the xline's without plotting before 
+% IMPORTANT - pick num of figure
+% if by click any raw figure %( using gcf)
+%
 function et_plot_all_xline_events(num_of_fig) 
 % function et_plot_all_xline_events(element,observer) % for new plot 
 % element can be (as a string) pdif P P2 H H2 V V2 asym 
