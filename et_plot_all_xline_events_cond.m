@@ -68,12 +68,13 @@ end
 if not(condi==1) % i.e. nergin=0,   i.e. showing only xlines according to events
 %if (condi==1) 
 
-    global trials
+    global trials; ETRepochs;
     hold all
     for i=1:length(trials)
-        %xl=xline(trials(i).time,'--m')
-        xline(trials(i).time,'--k')
-    end
+         x1= xline(trials(i).time,'--k',[ETRepochs(i).ev,' ',num2str(trials(i).time)]);
+          xl.LabelVerticalAlignment = 'bottom';
+          xl.LabelHorizontalAlignment = 'center';
+          xl.LabelOrientation='aligned'; %'horizontal';    end
     hold off
 end 
 %% the below for loop is if you want to label the xline by its condition / cmnt trials(i).cmnt
