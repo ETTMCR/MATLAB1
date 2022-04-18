@@ -25,7 +25,7 @@ for i=1: length(trials) %  20
     et_plot_ERE('p p2','%pre','1',['^',ETRepochs(i).cond,'$'],['^' num2str(i) '$'],1,0,1,0,0); % check for et_set_events_in_epochs_from_psy('eind','cmnt');
     title (['epoch # ',num2str(ETRepochs(i).epn),' of ',(ETRepochs(i).cond),' obs ',num2str(ETRepochs(i).obs)])
     if to_save %not saving that much of time - only 5 sec %or that my PC is to slow
-        %but anyway, it is not bothering, because no figure are pop up
+        %but anyway, this way it is not bothering, because no figure are pop up
         set(gcf,'Visible','off')
     end
     hold on
