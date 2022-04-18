@@ -24,7 +24,9 @@ for i=1: length(trials) %  20
 
     et_plot_ERE('p p2','%pre','1',['^',ETRepochs(i).cond,'$'],['^' num2str(i) '$'],1,0,1,0,0); % check for et_set_events_in_epochs_from_psy('eind','cmnt');
     title (['epoch # ',num2str(ETRepochs(i).epn),' of ',(ETRepochs(i).cond),' obs ',num2str(ETRepochs(i).obs)])
-
+    if to_save 
+        set(gcf,'Visible','off')
+    end
     hold on
     %legend('hide');
     xlabel('')
@@ -34,7 +36,8 @@ for i=1: length(trials) %  20
     hold off
     
     if to_save 
-        saveas(gcf,[ sessions(1).lname ,'_',num2str(i), '.',file_type]) %observers(1)
+        nameoffile=([ sessions(1).lname ,'_',num2str(i)]);%, '.',file_type]);
+        saveas(gcf,nameoffile,filetype)
     end    
 end
 
