@@ -20,13 +20,16 @@ end
 
 et_set_events_in_epochs_from_psy('eind','cmnt');
 close all
+tic
+
 for i=1: length(trials) %  20
 
     et_plot_ERE('p p2','%pre','1',['^',ETRepochs(i).cond,'$'],['^' num2str(i) '$'],1,0,1,0,0); % check for et_set_events_in_epochs_from_psy('eind','cmnt');
     title (['epoch # ',num2str(ETRepochs(i).epn),' of ',(ETRepochs(i).cond),' obs ',num2str(ETRepochs(i).obs)])
-    if to_save %not saving that much of time - only 5 sec %or that my PC is to slow
-        %but anyway, this way it is not bothering, because no figure are pop up
+    if to_save 
         set(gcf,'Visible','off')
+        %not saving that much of time - only 5 sec %or that my PC is to slow
+        %but anyway, this way it is not bothering, because no figure are pop up
     end
     hold on
     %legend('hide');
@@ -36,6 +39,10 @@ for i=1: length(trials) %  20
     yline(0,'--k')
     hold off
     
+      legend off 
+  set(gcf, 'MenuBar', 'none');
+set(gcf, 'ToolBar', 'none');
+    
     if to_save 
         nameoffile=([ sessions(1).lname ,'_',num2str(i)]);%, '.',file_type]);
         saveas(gcf,nameoffile,filetype)
@@ -43,3 +50,5 @@ for i=1: length(trials) %  20
 end
 
 end % ob function
+
+toc
