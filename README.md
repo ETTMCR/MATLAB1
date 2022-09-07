@@ -11,3 +11,10 @@ Functions I wrote for my own fun :
 * :mailbox_with_mail:	walla to gmail emails - script for retrieving the emails and the names of contact list from  Walla email server, and implant it to excel.
 * :balance_scale: find - "Spot the Difference" from two images.
 * :mantelpiece_clock:	clocks - some little entertain scripts, coding different graphical clocks.
+
+show_all_epochs DEMO:
+![show_all_epochs](https://github.com/ETTMCR/Matlab/blob/main/show_all_epochs%20DEMO.png)
+
+
+et_plot_all_xline_events_cond :
+![et_plot_all_xline_events_cond](https://github.com/ETTMCR/Matlab/blob/main/et_plot_all_xline_events_cond.png)
